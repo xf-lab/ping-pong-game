@@ -42,7 +42,10 @@ function drawEverything() {
 	colorRect(0,210,10,100,'white');
 
 	// next line draws the ball
-	colorRect(ballX,100,10,10,'red');
+	canvasContext.fillStyle = 'red';
+	canvasContext.beginPath();
+	canvasContext.arc(ballX, 100, 10, 0,Math.PI*2,true);
+	canvasContext.fill();
 }
 
 function colorRect(leftX,topY, width,height, drawColor) {
